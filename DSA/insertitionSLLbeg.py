@@ -10,6 +10,7 @@ class singleLinkedList:
         self.head = None
 
     # insert beg of the LL
+
     def insertatbeg(self, data):
         new_node = Node(data)
         if self.head == None:
@@ -18,7 +19,7 @@ class singleLinkedList:
             new_node.next = self.head
             self.head = new_node
 
-    def traverse(self):
+    def display(self):
         temp = self.head
 
         if self.head == None:
@@ -28,15 +29,29 @@ class singleLinkedList:
                 print(temp.data)
                 temp = temp.next
 
-obj=singleLinkedList()
-n1=Node(10)
-obj.head=n1
-n2=Node(20)
-n1.next=n2
-n3=Node(30)
-n2.next=n3
+if __name__=="__main__":
+    linklist=singleLinkedList()
+    while True:
+        print("\n1. Insert at beg ")
+        print("\n2. display ")
+        print("\n3. Exit ")
+        choice=int(input("Enter your choice :"))
 
-obj.traverse()
+        if choice == 1:
+            data=int(input("Enter data to insert"))
+            linklist.insertatbeg(data)
+        elif choice==2:
+            linklist.display()
+        elif choice==3:
+            print ("Exit program ")
+            break
+        else:
+            print("Invalid choice pls try Again !!!")
+
+
+
+
+
 
 
 

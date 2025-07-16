@@ -1,0 +1,4 @@
+import second
+
+second.A()
+

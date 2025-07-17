@@ -13,20 +13,57 @@ class insertitionSLLend:
         new_node1=Node(data)
 
         # use for node connection if exist
-        if new_node1==None:
-            head=new_node1
-        else:
-            new_node1.next=self.head
-            self.head=new_node1
-    def traverse(self):
-        temp=self.head
-
         if self.head==None:
-            print("LL is empty")
+            self.head=new_node1
         else:
-            while temp!=None:
+            temp=self.head
+            while (temp.next!=None):
                 temp=temp.next
-            temp.next=self.new_node1
+            temp.next=new_node1
+
+    def display(self):
+        if self.head==None:
+            print("LL does not exists")
+        else:
+            temp=self.head
+            while (temp!=None):
+                print(temp.data)
+                temp=temp.next
+
+if __name__=="__main__":
+     linklist = insertitionSLLend()
+
+     while True:
+         print("\n insert to end ")
+         print("\n Display")
+         print("\n Exit ")
+         choice = int(input("Enter your choice..."))
+
+         if choice == 1:
+             data = int(input("Enter data to insert"))
+             linklist.insertatend(data)
+         elif choice == 2:
+             linklist.display()
+
+         elif choice == 3:
+             print("Exit")
+
+         else:
+             print("This is invalid choice !!!!!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -64,21 +64,3 @@ if __name__ == "__main__":
     ll = creationLL()
     ll.insertitionLL()
     ll.traverse()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

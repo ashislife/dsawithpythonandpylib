@@ -11,7 +11,7 @@ class creationLL:
 
     def insertitionLL(self):
         while True:
-            data = int(input("Enter the value : "))
+            data = int(input("Enter the data : "))
             new_node = Node(data)
 
             if self.head == None:
